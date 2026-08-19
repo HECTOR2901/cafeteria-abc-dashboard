@@ -1,0 +1,57 @@
+table Productos
+	lineageTag: cedbf2cf-c69c-4710-8cd9-e614239e8128
+
+	column ProductoID
+		dataType: string
+		lineageTag: 479d870e-a0d5-4109-af18-682892bdf1c5
+		summarizeBy: none
+		sourceColumn: ProductoID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Producto
+		dataType: string
+		lineageTag: 454b633d-a7eb-409e-b217-9bc47f2ddace
+		summarizeBy: none
+		sourceColumn: Producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria
+		dataType: string
+		lineageTag: 62dd5415-6559-4a74-bac3-6e4a615b0bdb
+		summarizeBy: none
+		sourceColumn: Categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column Costo
+		dataType: int64
+		formatString: \$#,0
+		lineageTag: 0e1dc752-674b-4058-b4aa-a8c8cc21c420
+		summarizeBy: sum
+		sourceColumn: Costo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Precio
+		dataType: int64
+		formatString: \$#,0
+		lineageTag: 0c76484c-18f5-4785-a99a-bcfd7943cbc0
+		summarizeBy: sum
+		sourceColumn: Precio
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Productos = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(RutaDatos & "Productos.csv"),[Delimiter=",", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"ProductoID", type text}, {"Producto", type text}, {"Categoria", type text}, {"Costo", Int64.Type}, {"Precio", Int64.Type}}, "en-US")
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

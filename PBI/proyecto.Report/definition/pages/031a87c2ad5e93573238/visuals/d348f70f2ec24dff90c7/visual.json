@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "d348f70f2ec24dff90c7",
+  "position": {
+    "x": 16.588558711873279,
+    "y": 7.3726927608325692,
+    "z": 14000,
+    "height": 47.9225029454117,
+    "width": 169.57193349914908
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Cafetería ABC",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Inter, Segoe UI, sans-serif",
+                      "fontSize": "20px",
+                      "color": "#341706"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

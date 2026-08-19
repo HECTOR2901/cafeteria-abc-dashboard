@@ -1,0 +1,39 @@
+table Sucursales
+	lineageTag: 77b86fe2-08f0-44ac-bdbe-59722e673dc3
+
+	column SucursalID
+		dataType: string
+		lineageTag: c1fcf608-4a35-427c-8e45-f81528a31e5b
+		summarizeBy: none
+		sourceColumn: SucursalID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sucursal
+		dataType: string
+		lineageTag: c09ae341-2bb2-460c-be05-d8dc2de85fe5
+		summarizeBy: none
+		sourceColumn: Sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ciudad
+		dataType: string
+		lineageTag: 43b6e86d-8fd4-498d-92a1-aaa9426ae0a1
+		summarizeBy: none
+		sourceColumn: Ciudad
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Sucursales = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(RutaDatos & "Sucursales.csv"),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"SucursalID", type text}, {"Sucursal", type text}, {"Ciudad", type text}}, "en-US")
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

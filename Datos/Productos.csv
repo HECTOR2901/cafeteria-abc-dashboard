@@ -1,0 +1,16 @@
+ProductoID,Producto,Categoria,Costo,Precio
+P001,Latte,Café,28,65
+P002,Cappuccino,Café,30,70
+P003,Americano,Café,18,45
+P004,Cold Brew,Café,32,75
+P005,Mocha,Café,35,80
+P006,Matcha Latte,Bebidas,40,90
+P007,Chai Latte,Bebidas,38,85
+P008,Chocolate Caliente,Bebidas,25,60
+P009,Croissant,Panadería,20,50
+P010,Panini de Pavo,Alimentos,45,110
+P011,Cheesecake,Postres,40,95
+P012,Brownie,Postres,18,55
+P013,Galleta Red Velvet,Postres,15,45
+P014,Sándwich Veggie,Alimentos,42,105
+P015,Frappe Caramelo,Bebidas,45,98
