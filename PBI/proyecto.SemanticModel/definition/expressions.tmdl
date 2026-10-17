@@ -1,5 +1,0 @@
-expression RutaDatos = "C:\Users\Héctor Estéfano\Documents\project_bi\Datos\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
-	lineageTag: c9144671-4583-4247-9dcd-52396ffc7d70
-
-	annotation PBI_ResultType = Text
-
