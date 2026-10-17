@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/33608069/README.md)
 # ☕ Cafetería ABC — Dashboard Ejecutivo de Rendimiento
 
 **En una línea:** dashboard de Power BI que responde, para una cadena de 5 cafeterías (Querétaro y CDMX), qué se vende, qué deja más margen y cómo se mueven las ventas por sucursal, canal y método de pago. Construido en formato PBIP para versionarlo en Git.
