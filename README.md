@@ -7,7 +7,7 @@
 
 > ⚠️ **Datos sintéticos:** las 5,000 transacciones (enero a mayo 2026) son datos de ejemplo generados para este proyecto; no son cifras de un negocio real. Los hallazgos de abajo describen esos datos y sirven para mostrar el tipo de lectura que permite el dashboard.
 
-![Dashboard Cafetería ABC](images/dashboard.png)
+![Dashboard Cafetería ABC](images/dashboard.jpeg)
 
 ## 🎯 Preguntas de negocio que responde
 - ¿Cuánto vendemos, cuánto ganamos y qué tan rentable es cada producto?
