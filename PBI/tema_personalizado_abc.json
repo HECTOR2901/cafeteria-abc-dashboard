@@ -146,12 +146,10 @@
                 "color": "#51443E"
               }
             },
-            "gridline": {
-              "show": false,
-              "color": {
-                "solid": {
-                  "color": "#F0EEEC"
-                }
+            "gridlineShow": false,
+            "gridlineColor": {
+              "solid": {
+                "color": "#F0EEEC"
               }
             }
           }
@@ -165,12 +163,10 @@
                 "color": "#51443E"
               }
             },
-            "gridline": {
-              "show": true,
-              "color": {
-                "solid": {
-                  "color": "#F0EEEC"
-                }
+            "gridlineShow": true,
+            "gridlineColor": {
+              "solid": {
+                "color": "#F0EEEC"
               }
             }
           }
@@ -323,12 +319,53 @@
         "border": [
           {
             "show": true,
-            "radius": 9999,
+            "radius": 12,
             "color": {
               "solid": {
                 "color": "#D5C3BB"
               }
             }
+          }
+        ],
+        "header": [
+          {
+            "show": true,
+            "fontColor": {
+              "solid": {
+                "color": "#1E1B18"
+              }
+            },
+            "fontSize": 10,
+            "bold": true,
+            "fontFamily": "Segoe UI"
+          }
+        ],
+        "items": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#1E1B18"
+              }
+            },
+            "fontSize": 10,
+            "background": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "fontFamily": "Segoe UI"
+          }
+        ],
+        "title": [
+          {
+            "show": true,
+            "fontColor": {
+              "solid": {
+                "color": "#1E1B18"
+              }
+            },
+            "fontSize": 11,
+            "bold": true
           }
         ]
       }
