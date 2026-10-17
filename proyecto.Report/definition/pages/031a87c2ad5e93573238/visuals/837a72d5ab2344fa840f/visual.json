@@ -1,0 +1,55 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "837a72d5ab2344fa840f",
+  "position": {
+    "x": 210.12174368372823,
+    "y": 140.0811624558188,
+    "z": 6000,
+    "height": 99.531352271239683,
+    "width": 204.59222411310378,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Ganancia Bruta"
+                }
+              },
+              "queryRef": "_Medidas.Ganancia Bruta",
+              "nativeQueryRef": "Ganancia Bruta"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8f69547204b5ee4dea2c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Ganancia Bruta"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

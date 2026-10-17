@@ -1,0 +1,55 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "ce3f495cc8a54675a1a2",
+  "position": {
+    "x": 816.52572326220707,
+    "y": 141.92433564602695,
+    "z": 12000,
+    "height": 97.688179081031535,
+    "width": 191.6900117816468,
+    "tabOrder": 13000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Descuentos"
+                }
+              },
+              "queryRef": "_Medidas.Descuentos",
+              "nativeQueryRef": "Descuentos"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9ffa00e02cb5fcd198c2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Descuentos"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
