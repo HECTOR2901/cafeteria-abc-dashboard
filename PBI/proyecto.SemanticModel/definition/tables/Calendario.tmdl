@@ -1,0 +1,48 @@
+table Calendario
+	lineageTag: 08a9a31f-dd2d-4b3f-8332-9f01246df514
+	dataCategory: Time
+
+	column Año = YEAR('Calendario'[Date])
+		dataType: int64
+		formatString: 0
+		lineageTag: 4cc04063-d3ed-4ccd-8c8f-0a2112622f86
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes = MONTH('Calendario'[Date])
+		dataType: int64
+		formatString: 0
+		lineageTag: ddaea56e-b114-4455-9d6d-74e4686806a1
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column NombreMes = FORMAT('Calendario'[Date], "mmmm")
+		dataType: string
+		lineageTag: e54de84b-679a-42ac-b91d-82ca7736109c
+		summarizeBy: none
+		sortByColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column AñoMes = FORMAT('Calendario'[Date], "YYYY-MM")
+		dataType: string
+		lineageTag: 1a1a832b-4c82-46e3-87c9-bfddbbb41a3b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		isKey
+		lineageTag: 24d216b0-1bff-4745-9d91-a0c9270da1e6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendario = calculated
+		mode: import
+		source = CALENDAR(DATE(2026,1,1), DATE(2026,5,31))
+
